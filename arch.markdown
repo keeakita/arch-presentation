@@ -93,3 +93,57 @@ Lots of people draw comparisons between Arch Linux and Gentoo Linux. While they
 both have a very similar built-from-the-ground-up approach, Gentoo focuses far
 more on user choice and control (choice of init system, USE flags) and is source
 based. Arch is binary based and chooses systemd.
+
+# Installing Arch
+
+## Following Along
+
+If you plan on installing yourself, I highly recommend reading the [Arch Wiki's
+Beginner guide](https://wiki.archlinux.org/index.php/Beginners'_guide). Most of
+the content from the following slides comes from this page.
+
+## Ways to Install
+
+There are plenty of different ways to install Arch, including
+- Via a disk
+- Via a flash drive
+- Over the network
+- From an existing Linux Distribution
+
+This talk will mostly be covering the first two, but there's a lot of overlap in
+steps. Check the Arch Wiki.
+
+## Downloading the installer
+
+Arch Linux is *rolling-release*.
+- It has no official version number and releases packages as they updates are
+  available
+- Compare this to Ubuntu, which releases a new version every 6 months
+
+You can download a snapshot of the Arch installer image (generated monthly) from
+https://archlinux.org/download/.
+
+## Preparing the image
+
+Use your favorite disk burning program to burn to disk, or with a USB stick:
+
+    sudo dd if=archlinux-2016.01.01-dual.iso \
+      of=/dev/your-flashdrive
+    sync
+
+*NOTE:* Be **VERY CAREFUL** when making sure you're writing to the flash drive
+and not some other disk.
+
+## Booting into the installer
+
+If you have a UEFI computer (Windows 8 or 10), you will need to disable
+SecureBoot. This has probably already been done by you if you've installed Linux
+on the machine before. Instructions vary by machine.
+
+Insert the disk or flash drive and boot into it. This also varies by machine for
+no good reason.
+
+## Connect to the internet
+
+Arch downloads a fresh set of packages from the internet, so you'll need to be
+connected
