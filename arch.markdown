@@ -72,3 +72,24 @@ Keep It Simple."
   attempting to appeal to as many people as possible
 - *versatile* - Arch lets you make choices about how to build your system from
   the ground up
+
+## Why Arch?
+- Packages are updated frequently, you get new features soon after they come out
+- Arch lets you build a system tailored to your needs
+- Access to a large number of third party packages from the Arch User Repository
+    - Arch makes it easy to package software with `mkpkg` and `pacman`
+- A great learning experience for seeing what makes a Linux distro tick
+- The [Arch Wiki](https://wiki.archlinux.org/) has pretty good documentation
+
+## Why Not Arch?
+- Frequent updates mean things break sometimes
+- Frequent updates mean lots of downloading
+- It takes some work
+- You aren't comfortable with the command line or text editing
+- You hate systemd
+
+## A Note About Gentoo
+Lots of people draw comparisons between Arch Linux and Gentoo Linux. While they
+both have a very similar built-from-the-ground-up approach, Gentoo focuses far
+more on user choice and control (choice of init system, USE flags) and is source
+based. Arch is binary based and chooses systemd.
