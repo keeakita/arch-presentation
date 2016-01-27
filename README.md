@@ -9,9 +9,9 @@ have already given) at Open Source Club @ Ohio State on 2016-01-28.
 - [mtheme](https://github.com/matze/mtheme)
 
 ## Contents
-`arch.markdown` - the presentation content
-`template.latex` - the beamer LaTeX template (with some modifications)
-`Makefile` - the pandoc command used to generate the presentation
+- `arch.markdown` - the presentation content
+- `template.latex` - the beamer LaTeX template (with some modifications)
+- `Makefile` - the pandoc command used to generate the presentation
 
 ## License
 
