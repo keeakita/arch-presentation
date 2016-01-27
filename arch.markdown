@@ -39,6 +39,18 @@ affiliated with Arch Linux.
 
 (I have to put this in here to use the logo, and it's a really cool logo.)
 
+## Disclaimer
+
+This presentation is purely informational. No guarantees are made that the
+content within is complete or free from error. Any instructions given in this
+presentation are followed at your own risk. The presenter is not liable for any
+loss of data, damage to hardware, injury of persons, injury of mood, depression,
+hair loss, war breaking out, your cat dying or anything else.
+
+. . .
+
+(I have to put this in here to not be sued, and not being sued is really cool.)
+
 # Overview
 
 ## What is Arch Linux?
