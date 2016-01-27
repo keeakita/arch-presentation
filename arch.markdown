@@ -3,7 +3,7 @@ title: 'Arch Linux: An Overview'
 author: William Osler
 date:   January 28, 2016
 theme:  m
-logo:   logo.png
+logo:   logo.pdf
 defcolor:
   -
     name: ArchBlue
