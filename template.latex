@@ -70,6 +70,7 @@ $endif$
 $if(mainfont)$
 \usefonttheme{serif} % use mainfont rather than sansfont for slide text
 $endif$
+\setbeamerfont{alerted text}{series=\bfseries}
 $if(innertheme)$
 \useinnertheme{$innertheme$}
 $endif$
@@ -201,6 +202,10 @@ $if(dir)$
   \newenvironment{LTR}{\beginL}{\endL}
 \fi
 $endif$
+
+% Use Beamer's `\alert` for emphasis (but only for slides)
+\mode<presentation>{\let\emph\alert}
+
 $for(header-includes)$
 $header-includes$
 $endfor$

@@ -27,9 +27,10 @@ setcolor:
     type: frametitle
     fg: ArchBlue
     bg: DarkerGray
+links-as-notes: true
 ---
 
-# Disclaimer
+## Disclaimer
 
 The views expressed in this presentation are my own, and are not endorsed by or
 affiliated with Arch Linux.
@@ -37,3 +38,25 @@ affiliated with Arch Linux.
 . . .
 
 (I have to put this in here to use the logo, and it's a really cool logo.)
+
+# Overview
+
+## What is Arch Linux?
+
+*Arch Linux* is "a lightweight and flexible Linux® distribution that tries to
+Keep It Simple."
+
+## Guiding Principles
+- *simple* - Packages made available to Arch have few modifications from
+  upstream
+- *modern* - Packages stay up to date and aim for the most recent stable version
+- *pragmatic* - Arch aims to favor practical arguments and developer consensus
+  over ideological concerns
+    - Arch Linux repositories contain nonfree software, for an alternative see
+      [Parabola GNU/Linux-libre](https://www.parabola.nu/)
+
+## Guiding Principles
+- *user centric* - Arch is largely driven by its own userbase rather than
+  attempting to appeal to as many people as possible
+- *versatile* - Arch lets you make choices about how to build your system from
+  the ground up
