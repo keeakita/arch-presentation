@@ -28,6 +28,7 @@ setcolor:
     fg: ArchBlue
     bg: DarkerGray
 links-as-notes: true
+cc-by: true
 ---
 
 ## Disclaimer

@@ -223,7 +223,14 @@ $endif$
 
 \begin{document}
 $if(title)$
-\frame{\titlepage}
+\begin{frame}
+  \titlepage
+  $if(cc-by)$
+  \begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=south east] at (current page.south east){\includegraphics[width=2cm]{./cc-by-40.png}};
+  \end{tikzpicture}
+  $endif$
+\end{frame}
 $endif$
 
 $if(logo)$
