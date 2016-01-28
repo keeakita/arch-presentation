@@ -473,3 +473,97 @@ recommend:
 MSDOS: *GRUB*, the GRand Unified Bootloader  
 UEFI: *rEFInd*, a graphical UEFI boot manager
 
+## Boot Loader - GRUB
+
+GRUB is installed to a section of the disk called the MBR, that the BIOS
+executes when it first starts up. GRUB then loads config files from the boot
+partition and lets you select an operating system to boot.
+
+    pacman -S grub os-prober
+    grub-install --recheck /dev/sda
+    grub-mkconfig -o /boot/grub/grub.cfg
+
+And hope everything Just Works(tm)
+
+## Boot Loader - rEFInd
+
+rEFInd is a *boot manager* that gives you a graphical menu that lets you select
+different UEFI executables and boot loaders. rEFInd is capable of autodetecting
+many types of already installed operating systems.
+
+- Technically, rEFInd is not a boot loader. The Linux kernel itself is a valid
+  UEFI executable and capable of booting itself, rEFInd just manages this
+  process
+
+```
+pacman -S refind-efi
+refind-install
+```
+
+And hope everything Just Works(tm)
+
+## Special Case: Things didn't Just Work(tm)!
+
+See the Arch Wiki for common issues.
+
+## Configuration - Network
+
+Set the hostname. Do something creative!
+
+    # Not creative
+    echo 'green' >> /etc/hostname
+
+Ethernet:
+- Enable DHCP by default: `sudo systemctl enable dhcpcd@interface.service`,
+  where interface is the name of the interface (check `ip addr`)
+
+Wireless:
+- Install the tools for wifi-menu: `pacman -S iw wpa_supplicant dialog`
+- Install any wireless drivers (Check the Wiki)
+
+## Configuration - Root Password
+Set the root password:
+
+    passwd
+
+## Configuration - Create an (admin) User
+You probably don't want to do everything as root. Create a user for yourself:
+
+    useradd william
+    mkdir /home/william
+    chown william:william /home/william
+    passwd william
+    gpasswd -a william wheel
+    EDITOR=nano visudo
+
+And uncomment the line:
+
+    %wheel ALL=(ALL) ALL
+
+## Configuration - Exit Chroot
+
+Type `exit` to leave the chroot. If you're on OSU Wireless, copy your
+`/etc/netctl/osuwireless` config to `/mnt/etc/netctl/osuwireless`.
+
+## Unmount the target
+
+`sudo umount -R /mnt`
+
+## Reboot
+
+`reboot`
+
+And pray
+
+. . .
+
+TODO: OH MY GOD DO I PRAY
+
+
+## Congratulations
+
+You are now an Arch Linux user.
+
+. . .
+
+~~Proceed to reddit to brag about how much a 1337 hax0r you are~~
