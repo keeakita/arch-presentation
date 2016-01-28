@@ -553,12 +553,13 @@ Type `exit` to leave the chroot. If you're on OSU Wireless, copy your
 
 `reboot`
 
-And pray
-
 . . .
 
-TODO: OH MY GOD DO I PRAY
+And pray
 
+## Reboot
+
+![OH MY GOD DO I PRAY](./ohmygoddoipray.png){width=3.5in}
 
 ## Congratulations
 
@@ -567,3 +568,86 @@ You are now an Arch Linux user.
 . . .
 
 ~~Proceed to reddit to brag about how much a 1337 hax0r you are~~
+
+# Graphical Environments
+
+## Setting up a Graphical Environment
+
+After rebooting, you may notice that you're still in a text environment. Arch
+lets you choose which desktop applications you want.
+
+. . .
+
+You'll need to install a few things or order to get started with graphical
+applications
+
+## Display Drivers
+
+You need graphics drivers specific to your hardware. In the case of AMD and
+NVIDIA, you have a choice between proprietary and open source graphics.
+
+Install the corresponding package(s):
+
+Hardware    Proprietary         Open Source
+----------- ------------------- ------------------
+AMD         catalyst (AUR)      xf86-video-ati
+NVIDIA      nvidia nvidia-libgl xf86-video-nouveau
+Intel       N/A                 xf86-video-intel
+
+If you have a touchpad, install `xf86-input-synaptics`
+
+## Desktop Environments
+
+You can install large sets of related programs, called *desktop environments*,
+or mix and match applications to make your own setup.
+
+## Desktop Environments - GNOME
+`pacman -S gdm gnome gnome-extra`
+
+![GNOME](./gnome-screenshot.png){width=4in}
+
+## Desktop Environments - KDE
+`pacman -S sddm plasma-meta`
+
+![KDE](./kde-desktop.png){width=3.75in}
+
+## Desktop Environments - LXDE
+`pacman -S lxdm lxde`
+
+![LXDE](./lxde-screenshot.png){width=3.125in}
+
+## Desktop Environments - Cinnamon
+`pacman -S gdm cinnamon`
+
+![Cinnamon](./cinnamon-desktop.png){width=4in}
+
+## Desktop Environments - XFCE
+`pacman -S lxdm xfce4 xfce4-goodies`
+
+![XFCE](./xfce-desktop.jpg){width=4in}
+
+## Desktop Environments - And More!
+
+There are tons of others. Officially:
+- Deepin
+- GNOME Flashback
+- LXQt
+- MATE
+
+In the AUR:
+- Pantheon
+- Unity
+- Common Desktop Environment
+- Soooo many more
+
+Check the Arch Wiki.
+
+## Desktop Environments - Display Manager
+
+You can enable your chosen display manager to run at startup:
+
+    sudo systemctl enable *dm.service
+
+Then to start using it now:
+
+    sudo systemctl start *dm.service

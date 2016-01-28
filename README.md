@@ -15,6 +15,4 @@ have already given) at Open Source Club @ Ohio State on 2016-01-28.
 
 ## License
 
-See `COPYING` for details. The Arch logo is trademarked. `template.latex`
-contains modifications under the BSD 3-clause. Everything else is mine and
-released under MIT.
+See `COPYING` for details.
