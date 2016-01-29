@@ -652,3 +652,84 @@ You can enable your chosen display manager to run at startup:
 Then to start using it now:
 
     sudo systemctl start *dm.service
+
+# Managing an Arch System
+
+## Managing Packages
+
+Arch Linux uses *pacman* as its package manager. It's used to install and
+install software.
+
+Compared to other package managers, pacman:
+- Can update the whole system in a single command
+- Lets you query installed packages
+- Can package your own software really simply
+
+## pacman Examples
+
+Install a package: `pacman -S packagename`  
+Remove a package: `pacman -Rsc packagename`  
+Update all packages: `pacman -Suy`  
+List the files in a package: `pacman -Ql packagename`  
+
+## Faster pacman downloads
+
+By default pacman chooses a mirror that might not be optimal. You can speed it
+up using `rankmirrors` to find a hot local mirror near you.
+
+1. Edit `/etc/pacman.d/mirrorlist` and uncomment mirrors in your country
+2. Run `rankmirrors mirrorlist > mirrorlist.new`
+3. `cp mirrolist.new mirrorlist`
+
+## mkpkg
+
+Arch's package system is super simple (compared to some others). The package
+format is just compressed tar files with a `PKGBUILD` describing how to build
+and a `.install` that runs when installed.
+
+## AUR
+
+When you make your own package, you can push it out to other Arch users to use
+themselves. The *Arch User Repository* is a collection of software packaged by
+the Arch community.
+
+*WARNING*: These packages can be created by ANYONE and have no guarantees of
+stability of safety. Use at your own risk!
+
+## Installing an AUR Package
+
+1. `git clone` from the AUR repository for that package
+2. Install dependencies
+3. `mkpkg`
+4. If it worked, `sudo pacman -U package-file.tar.xz`
+
+## AUR scripts
+
+An AUR script makes it easy to install AUR packages in an automated fashion. If
+you're on x86_64, check out `aura-bin` from the AUR. If you're on i686 or ARM,
+check out `yaourt` from the AUR.
+
+## systemd
+
+Systemd is the init system for Arch. At a high level, you'll probably be using
+it to manage system services.
+
+Start a service: `systemctl start sshd`  
+Stop a service: `systemctl stop sshd`  
+Autostart a service: `systemctl enable sshd`  
+Remove an autostart: `systemctl distable sshd`
+
+## netctl
+
+Arch Linux by default uses `netctl` to manage the network. Profiles are
+described by text files in `/etc/netctl`. You can find samples in
+`/etc/netctl/examples`.
+
+Standard wifi profiles can be generated with `wifi-menu`.
+
+Starting a profile: `netctl start osuwireless`  
+Stopping a profile: `netctl stop osuwireless`  
+Stopping all networks: `netctl stop-all`  
+Autostart a network: `netctl enable osuwireless`  
+Disable an autostart: `netctl disable osuwireless`
+
