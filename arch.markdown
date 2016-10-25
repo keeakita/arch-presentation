@@ -2,7 +2,7 @@
 title: 'Arch Linux: An Overview'
 author: William Osler
 date:   January 28, 2016
-theme:  m
+theme:  metropolis
 logo:   logo.pdf
 defcolor:
   -

@@ -6,7 +6,9 @@ have already given) at Open Source Club @ Ohio State on 2016-01-28.
 ## Requirements
 - [Pandoc](http://pandoc.org/)
 - TeXLive (or some other pandoc compatible TeX engine)
-- [mtheme](https://github.com/matze/mtheme)
+- [The Metropolis Beamer Theme](https://github.com/matze/mtheme)
+    - Available in the AUR as `beamer-theme-metropolis`
+    - Also requires Fira Mono and Fira Sans fonts
 
 ## Contents
 - `arch.markdown` - the presentation content
